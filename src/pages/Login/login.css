@@ -1,0 +1,46 @@
+@charset "UTF-8"; 
+:root {
+    --cor-background: #4C4D47;
+    --cor-texto:#DDE6A7;
+}
+
+body {
+    background-color: #CACCBE;
+}
+.Login {
+    margin: auto;
+    background-color: var(--cor-background);
+    max-width: 400px;
+    min-width: 300px;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.329);
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.Login h1 {
+    
+    font-weight: Lighter;
+    text-align: center;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.39);
+    color:var(--cor-texto);
+    padding: 0px 0px 5x 0px;
+    margin: 0px 0px 10px 0px;
+}
+
+.InputEmail {
+    padding: 3px;
+}
+
+.login-eye {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    margin: 0px;
+    margin-left: 250px;
+    margin-top: -20px;
+    
+}
+
