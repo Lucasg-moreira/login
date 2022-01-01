@@ -1,22 +1,26 @@
 @charset "UTF-8"; 
 :root {
-    --cor-background: #4C4D47;
-    --cor-texto:#DDE6A7;
 }
 
+* {
+    
+}
 body {
-    background-color: #CACCBE;
+    background-color: white;
+}
+.App {
+    margin-top: 10%;
 }
 .Login {
     margin: auto;
     background-color: var(--cor-background);
-    max-width: 400px;
+    max-width: 380px;
     min-width: 300px;
-    border-radius: 10px;
     padding: 10px;
     text-align: center;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.329);
     font-family: Arial, Helvetica, sans-serif;
+    
     
 }
 
@@ -30,6 +34,24 @@ body {
     margin: 0px 0px 10px 0px;
 }
 
+.InputEmail > p {
+    text-align: left;
+    margin-left: 33px;
+    font-size: 0.9em;
+    color: grey;
+    padding: 5px;
+
+}
+
+.InputPwd > p {
+    text-align: left;
+    margin-left: 33px;
+    font-size: 0.9em;
+    color: grey;
+    padding: 5px;
+
+}
+
 .InputEmail {
     padding: 3px;
 }
@@ -39,8 +61,78 @@ body {
     width: 30px;
     height: 30px;
     margin: 0px;
-    margin-left: 250px;
-    margin-top: -20px;
+    margin-left: 300px;
+    margin-top: -25px;
     
 }
 
+
+img {
+    width: 200px;
+}
+
+img#imagem {
+    max-width: 300px;
+    display: inline;
+    
+}
+input {
+    width: 300px;
+    height: 25px;
+    background-color: rgb(223, 247, 255);
+    outline: 0px;
+    outline-style: none;
+    outline-color: rgba(0, 0, 255, 0.308);
+    border-radius: 4px;
+    
+    
+}
+
+input[type='email'], [type='password'], [type='text'] {
+    border: 1px solid rgba(0, 0, 0, 0.315);
+}
+
+input:focus {
+    border: 2px solid rgba(123, 215, 245, 0.671);
+}
+
+
+#noPwd > p {
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 13px;
+
+}
+
+#noPwd  a {
+    text-decoration: none;
+}
+#noPwd a:hover {
+    text-decoration: underline;
+    
+}
+
+
+.enviar {
+    width: 305px;
+    padding: 8px;
+    background-color: #5162fa;
+    color: white;
+    border-radius: 4px;
+    outline: 0;
+    border: 1px;
+    margin-top: 10px;
+}
+
+.enviar:hover {
+    cursor: pointer;
+}
+
+footer {
+    margin-top: 10px;
+}
+
+footer p {
+    font-size: 0.7em;
+    color: grey;
+}

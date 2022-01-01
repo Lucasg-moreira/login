@@ -17,7 +17,7 @@ const Login = () => {
             acesso: 'lucasmoreira.gabriel2004@gmail.com',
             pwd: 'admin'
         }
-    
+
     )
     const handleClick = (e) => {
         e.preventDefault()
@@ -28,7 +28,7 @@ const Login = () => {
         const login_email = setEmail => (document.querySelector('.InputEmail').value)
         const login_senha = setPwd => (document.querySelector('.InputPwd').value)
 
-        if ( email === banco.acesso && pwd === banco.pwd) {
+        if (email === banco.acesso && pwd === banco.pwd) {
             alert('Seu login foi efeituado com sucesso!')
         }
         else (alert('Seu dados estão incorretos!')
@@ -40,10 +40,13 @@ const Login = () => {
 
 
             <div className="login-right">
-                <h1>Admin painel</h1>
 
+                <div id='imagem'>
+                    <img src='https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ficon-library.com%2Fimages%2Freact-icon%2Freact-icon-0.jpg&f=1&nofb=1'></img>
+                </div>
 
                 <div className='InputEmail'>
+                    <p>Usuário</p>
                     <input
                         type='email'
                         placeholder='digite seu email'
@@ -52,7 +55,9 @@ const Login = () => {
                         id='email' />
 
                 </div>
+                
                 <div className='InputPwd'>
+                    <p>Senha</p>
                     <input
                         type={show ? "text" : "password"}
                         placeholder='digite sua senha'
@@ -60,6 +65,7 @@ const Login = () => {
                         onChange={e => setPwd(e.target.value)}
                         id='pwd'
                     />
+
                     <div className="login-eye">
 
                         {show ? (
@@ -78,7 +84,15 @@ const Login = () => {
 
                 <button type='submit' className='enviar' onClick={comparar} >Entrar</button>
 
+                <span id='noPwd'>
+                    <p><a href="#">Esqueci minha senha</a></p>
+                </span>
 
+                <div className='rodape'>
+                    <footer>
+                        <p> © criado por Lucas Gabriel - 2021</p>
+                    </footer>
+                </div>
             </div>
         </div>
     )
