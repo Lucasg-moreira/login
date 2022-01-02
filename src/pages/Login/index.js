@@ -14,9 +14,10 @@ const Login = () => {
     const [show, setShow] = useState(false)
     let banco = (
         {
-            acesso: 'lucasmoreira.gabriel2004@gmail.com',
-            pwd: 'admin'
+            'acesso' : 'lucasmoreira.gabriel2004@gmail.com',
+            'pwd' : 'admin'
         }
+    
 
     )
     const handleClick = (e) => {
@@ -25,9 +26,7 @@ const Login = () => {
     }
 
     const comparar = () => {
-        const login_email = setEmail => (document.querySelector('.InputEmail').value)
-        const login_senha = setPwd => (document.querySelector('.InputPwd').value)
-
+      
         if (email === banco.acesso && pwd === banco.pwd) {
             alert('Seu login foi efeituado com sucesso!')
         }
@@ -49,10 +48,11 @@ const Login = () => {
                     <p>Usuário</p>
                     <input
                         type='email'
-                        placeholder='digite seu email'
+                        placeholder='Example@gmail.com'
                         value={email}
                         onChange={e => setEmail(e.target.value)}
-                        id='email' />
+                        id='email'
+                    />
 
                 </div>
                 
@@ -60,7 +60,7 @@ const Login = () => {
                     <p>Senha</p>
                     <input
                         type={show ? "text" : "password"}
-                        placeholder='digite sua senha'
+                        placeholder='Password'
                         value={pwd}
                         onChange={e => setPwd(e.target.value)}
                         id='pwd'

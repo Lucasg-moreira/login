@@ -61,7 +61,7 @@ body {
     width: 30px;
     height: 30px;
     margin: 0px;
-    margin-left: 300px;
+    margin-left: 310px;
     margin-top: -25px;
     
 }
@@ -112,6 +112,9 @@ input:focus {
     
 }
 
+::placeholder{
+    padding-left: 10px;
+}
 
 .enviar {
     width: 305px;
