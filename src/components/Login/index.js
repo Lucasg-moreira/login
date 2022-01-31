@@ -1,49 +1,59 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import './login.css'
 import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
+import { Img } from '../Img';
+import { ErrorLogin } from '../Error';
 
-
-
-
-
-
+const banco = [
+    {
+        id: 1, login: 'lucasmoreira.gabriel2004@gmail.com', pwd: 'admin'
+    },
+    {
+        id: 2, login: 'teste@gmail.com', pwd: 'admin'
+    },
+    {
+        id: 3, login: 'isa@gmail.com', pwd: 'teste'
+    }
+]
 
 const Login = () => {
     const [email, setEmail] = useState("")
     const [pwd, setPwd] = useState("")
     const [show, setShow] = useState(false)
-    let banco = (
-        {
-            'acesso' : 'lucasmoreira.gabriel2004@gmail.com',
-            'pwd' : 'admin'
-        }
-    
-
-    )
+    const [errorLogin, setError] = useState(false)
     const handleClick = (e) => {
         e.preventDefault()
         setShow(!show)
     }
 
-    const comparar = () => {
-      
-        if (email === banco.acesso && pwd === banco.pwd) {
-            alert('Seu login foi efeituado com sucesso!')
+    const erroLogin = () => {
+        if (email === "" || pwd === "") {
+            setError(true)
         }
-        else (alert('Seu dados estão incorretos!')
-
-        )
     }
+    const comparar = () => {
+        erroLogin()
+        if (errorLogin === false) {
+            banco.forEach((element, i) => {
+                const itemLogin = element.login
+                const itemPwd = element.pwd
+                if (itemLogin === email && itemPwd === pwd) {
+                    alert('Login efetuado com sucesso!')
+
+                }
+            }
+            )
+        }else if(errorLogin !== false){
+         setError(false)
+        }
+    }
+
+
+
     return (
         <div className="Login">
-
-
             <div className="login-right">
-
-                <div id='imagem'>
-                    <img src='https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ficon-library.com%2Fimages%2Freact-icon%2Freact-icon-0.jpg&f=1&nofb=1'></img>
-                </div>
-
+                <Img />
                 <div className='InputEmail'>
                     <p>Usuário</p>
                     <input
@@ -53,9 +63,8 @@ const Login = () => {
                         onChange={e => setEmail(e.target.value)}
                         id='email'
                     />
-
                 </div>
-                
+
                 <div className='InputPwd'>
                     <p>Senha</p>
                     <input
@@ -83,6 +92,7 @@ const Login = () => {
                 </div>
 
                 <button type='submit' className='enviar' onClick={comparar} >Entrar</button>
+                {errorLogin === true ? <ErrorLogin /> : <p id="hidden">teste</p>}
 
                 <span id='noPwd'>
                     <p><a href="#">Esqueci minha senha</a></p>
@@ -98,13 +108,4 @@ const Login = () => {
     )
 
 }
-
-
-
-
-
-
-
-
-
 export default Login;

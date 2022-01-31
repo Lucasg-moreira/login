@@ -134,3 +134,12 @@ footer p {
     font-size: 0.7em;
     color: grey;
 }
+
+#error {
+    font-size: 0.8em;
+    color: rgb(181, 69, 69);
+}
+
+#hidden {
+    display: none;
+}
